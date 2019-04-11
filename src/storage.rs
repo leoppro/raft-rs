@@ -51,12 +51,12 @@ pub struct RaftState {
     /// state.
     #[get = "pub"]
     #[set]
-    pending_conf_state: Option<ConfState>,
+    pub pending_conf_state: Option<ConfState>,
     /// If `pending_conf_state` exists this will contain the index of the `BeginMembershipChange`
     /// entry.
     #[get = "pub"]
     #[set]
-    pending_conf_state_start_index: Option<u64>,
+    pub pending_conf_state_start_index: Option<u64>,
 }
 
 /// Storage saves all the information about the current Raft implementation, including Raft Log, commit index, the leader to vote for, etc.
